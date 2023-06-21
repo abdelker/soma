@@ -91,7 +91,7 @@ if (not args.namespace) or (len(args.namespace) != len(args.start_concepts)):
 
 vocabs = {}
 
-for vid, ns, scs in itertools.izip(args.vocabulary_id, args.namespace, args.start_concepts):
+for vid, ns, scs in zip(args.vocabulary_id, args.namespace, args.start_concepts): #zip python3
     if vid not in vocabs:
         vocabs[vid] = []
     for sc in scs:
